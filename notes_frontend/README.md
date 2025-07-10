@@ -10,7 +10,25 @@
 
 ## Project Structure
 
-This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/).
+
+---
+
+### ⚠️ Supabase Environment Variables Setup
+
+To connect to your Supabase backend, you **must** create a `.env` file in the root of this `notes_frontend` folder:
+
+1. Copy `.env.example` to `.env`
+2. Ensure you set the API and ANON keys with the `VITE_` prefix:
+
+```
+VITE_SUPABASE_URL=your-project-url
+VITE_SUPABASE_ANON_KEY=your-anon-key
+```
+
+**Do NOT use `PUBLIC_SUPABASE_URL` or `PUBLIC_SUPABASE_ANON_KEY` as your only variable names**: they will not be available on the client in Qwik/Vite projects unless also supplied as `VITE_` variables.
+
+---
 
 Inside your project, you'll see the following directory structure:
 
